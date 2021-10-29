@@ -13,7 +13,7 @@
         }
         h1 {
             position: relative;
-            top: 150px;
+            top: 200px;
             text-align: left;
             font-weight: bold;
             font-size: 80px;
@@ -21,7 +21,7 @@
             white-space: nowrap;
             overflow: hidden;
             width: 770px;
-            left: calc(50% - 387.5px);
+            left: calc(50% - 381px);
         }
 
         p {
@@ -35,8 +35,89 @@
 
         .topnav {
             position:fixed;
-            top: 10px;
-            right: 1%;
+            top: 15px;
+            right: 2%;
+            font-family: Didot;
+            font-size: 20px;
+            /* border: solid #000; */
+            /* border-width:  0 0 1px 0 ; */
+        }
+
+        .item {
+          position: relative;
+          text-decoration: none;
+          color: black;
+          display: inline-block;
+          width: 110px;
+          height: 35px;
+          text-align: center;
+          vertical-align: middle;
+          transition: 0.1s;
+        }
+
+        .item:hover {
+          font-size: 50px;
+          font-style: italic;
+          font-weight: bold;
+          color: rgba(143, 57, 57, 0.6);
+        }
+
+        .item:hover::before {
+          content: 'DESIRE';
+          position: absolute;
+          display: inline-block;
+          font-style: normal;
+          left:-15px;
+          font-size:30px;
+          color: rgba(89, 110, 180, 0.5);
+          z-index:-1;
+        }
+
+        .item:hover::after {
+          content: '';
+          position: absolute;
+          display: inline-block;
+          z-index: -5;
+          height: 10000%;
+          width: 10000%;
+          background-color: aquamarine;
+          top: -100%;
+          left: -40%;
+        }
+
+        .a:hover::after {
+          background-color: aquamarine;
+        }
+        .b:hover::after {
+          background-color:blueviolet;
+        }
+        .c:hover::after {
+          background-color:palevioletred;
+        }
+
+        .random {
+          position: fixed;
+          z-index: 10;
+          height: 100%;
+          width: 10%;
+          top:0;
+          left: 30%;
+        }
+        
+        .random:hover {
+          background-color: coral;
+        }
+        .random2 {
+          position: fixed;
+          z-index: 10;
+          height: 30%;
+          width: 100%;
+          top: 60%;
+          left: 20%;
+        }
+        
+        .random2:hover {
+          background-color:darkolivegreen;
         }
 
     </style>
@@ -46,12 +127,18 @@
 
   <body>
     <h1 id="name"></h1>
+
     <p>titties!</p>
+
     <div class="topnav">
-        <a href="../">Home</a>
-        <a href="contact">Contact</a>
-        <a href="about">About</a>
+        <a class="item a" href="../">Home</a>
+        <a class="item b" href="contact">Contact</a>
+        <a class="item c" href="about">About</a>
     </div>
+
+    <div class="random"></div>
+    <div class="random2"></div>
+
 
     <script>
       let name = 'TUANH TRAN CAO'.split('');
