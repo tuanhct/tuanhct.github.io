@@ -53,7 +53,7 @@
           height: 32px;
           text-align: center;
           vertical-align: middle;
-          transition: 0.1s;
+          transition: 0.1s; 
         }
 
         .item:hover {
@@ -61,19 +61,6 @@
           /* text-shadow: 0 0 2px #000; */
         }
 
-        .a:hover::after {
-          background-color: aquamarine;
-        }
-        .b:hover::after {
-          background-color:blueviolet;
-        }
-        .c:hover::after {
-          background-color:palevioletred;
-        }
-
-        #button:hover {
-          background-color: #000;
-        }
 
     </style>
   </head>
@@ -83,17 +70,13 @@
   <body>
     <h1 id="name"></h1>
 
-    <p>titties!</p>
+    <p></p>
 
     <div class="topnav">
         <a class="item a" href="../">Home</a>
         <a class="item b" href="contact">Contact</a>
         <a class="item c" href="about">About</a>
     </div>
-
-
-    <div id="button" onmouseover="spam()" style="position:fixed; height:10%; width:10%; top: 80%; left: 10%; border: 2px solid #000;"></div>
-
 
     <script>
       let name = 'TUANH TRAN CAO'.split('');
@@ -108,13 +91,6 @@
         }
       }, 200);
 
-      function spam() {
-        document.body.style.backgroundColor = "rgb(0,0,0)";
-        setInterval(function() {
-          document.body.style.backgroundColor = "rgb("+Math.random()*255+","+Math.random()*255+",0)";
-        }, 500);
-          
-      }
 
     </script>
   </body>
