@@ -10,28 +10,69 @@
             padding: 0;
             margin: 0;
             left: 0;
+            transition:1s;
         }
         h1 {
             position: relative;
-            top: 100px;
-            text-align: center;
+            top: 200px;
+            text-align: left;
+            font-weight: bold;
             font-size: 80px;
             font-family: Didot;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 770px;
+            left: calc(50% - 381px);
         }
 
-
         p {
-            position: relative;
-            top: 150px;
+            position: fixed;
+            top: 350px;
+            left: 675px;
             text-align: center;
-            font-size: 15px;
+            font-size: 30px;
             font-family: Didot;
         }
 
         .topnav {
             position:fixed;
-            top: 10px;
-            right: 1%;
+            top: 15px;
+            right: 2%;
+            font-family: Didot;
+            font-size: 20px;
+            border: solid #000;
+            border-width:  0 0 1px 0;
+        }
+
+        .item {
+          position: relative;
+          text-decoration: none;
+          color: black;
+          display: inline-block;
+          width: 110px;
+          height: 32px;
+          text-align: center;
+          vertical-align: middle;
+          transition: 0.1s;
+        }
+
+        .item:hover {
+          font-size: 25px;
+          text-shadow: 0 0 5px 0;
+        }
+
+        .a:hover::after {
+          background-color: aquamarine;
+        }
+        .b:hover::after {
+          background-color:blueviolet;
+        }
+        .c:hover::after {
+          background-color:palevioletred;
+        }
+
+        #button:hover {
+          background-color: #000;
         }
 
     </style>
@@ -40,13 +81,41 @@
 
 
   <body>
-    <h1>TUANH TRAN CAO</h1>
-    <p>titties!</p>
-    <div class="topnav">
-        <a href="../">Home</a>
-        <a href="contact">Contact</a>
-        <a href="../about">About</a>
-    </div>
-  </body>
+    <h1 id="name"></h1>
 
+    <p>titties!</p>
+
+    <div class="topnav">
+        <a class="item a" href="../">Home</a>
+        <a class="item b" href="contact">Contact</a>
+        <a class="item c" href="about">About</a>
+    </div>
+
+
+    <div id="button" onmouseover="spam()" style="position:fixed; height:10%; width:10%; top: 80%; left: 10%; border: 2px solid #000;"></div>
+
+
+    <script>
+      let name = 'TUANH TRAN CAO'.split('');
+      let nameHeader = document.getElementById("name");
+      var i = 0;
+      var typewriter = setInterval(function() {
+        if (i === name.length) {
+          clearInterval();
+        } else {
+            nameHeader.innerHTML += name[i];
+            i = i + 1;
+        }
+      }, 100);
+
+      function spam() {
+        document.body.style.backgroundColor = "rgb(0,0,0)";
+        setInterval(function() {
+          document.body.style.backgroundColor = "rgb("+Math.random()*255+","+Math.random()*255+",0)";
+        }, 500);
+          
+      }
+
+    </script>
+  </body>
 </html>
