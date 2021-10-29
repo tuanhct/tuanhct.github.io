@@ -14,16 +14,22 @@
         h1 {
             position: relative;
             top: 150px;
-            text-align: center;
+            text-align: left;
+            font-weight: bold;
             font-size: 80px;
             font-family: Didot;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 770px;
+            left: calc(50% - 387.5px);
         }
 
         p {
-            position: relative;
-            top: 150px;
+            position: fixed;
+            top: 350px;
+            left: 675px;
             text-align: center;
-            font-size: 15px;
+            font-size: 30px;
             font-family: Didot;
         }
 
@@ -39,13 +45,25 @@
 
 
   <body>
-    <h1>TUANH TRAN CAO</h1>
+    <h1 id="name"></h1>
     <p>titties!</p>
     <div class="topnav">
         <a href="../">Home</a>
         <a href="contact">Contact</a>
         <a href="about">About</a>
     </div>
-  </body>
 
+    <script>
+      let name = 'TUANH TRAN CAO'.split('');
+      let nameHeader = document.getElementById("name");
+      var i = 0;
+      var typewriter = setInterval(function() {
+        if (i === name.length) {
+          clearInterval();
+        } else {
+            nameHeader.innerHTML += name[i];
+            i = i + 1;
+        }}, 100);
+    </script>
+  </body>
 </html>
