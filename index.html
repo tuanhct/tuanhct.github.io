@@ -10,6 +10,7 @@
             padding: 0;
             margin: 0;
             left: 0;
+            transition:1s;
         }
         h1 {
             position: relative;
@@ -120,6 +121,10 @@
           background-color:darkolivegreen;
         }
 
+        #button:hover {
+          background-color: #000;
+        }
+
     </style>
   </head>
 
@@ -139,6 +144,8 @@
     <div class="random"></div>
     <div class="random2"></div>
 
+    <div id="button" onmouseover="spam()" style="position:fixed; height:10%; width:10%; top: 80%; left: 10%; border: 2px solid #000;"></div>
+
 
     <script>
       let name = 'TUANH TRAN CAO'.split('');
@@ -150,7 +157,17 @@
         } else {
             nameHeader.innerHTML += name[i];
             i = i + 1;
-        }}, 100);
+        }
+      }, 100);
+
+      function spam() {
+        document.body.style.backgroundColor = "rgb(0,0,0)";
+        setInterval(function() {
+          document.body.style.backgroundColor = "rgb("+Math.random()*255+","+Math.random()*255+",0)";
+        }, 500);
+          
+      }
+
     </script>
   </body>
 </html>
