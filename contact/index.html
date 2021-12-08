@@ -2,65 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="This is my first website. It includes lots of information about my life.">
-    <title>TUANH TRAN CAO</title>
+    <title>Tuanh Cao</title>
     <style>
         body, html {
             top: 0;
             padding: 0;
             margin: 0;
             left: 0;
-            transition:1s;
         }
-        h1 {
+        .name {
             position: relative;
-            top: 200px;
-            text-align: left;
-            font-weight: bold;
-            font-size: 90px;
-            font-family: Didot;
-            white-space: nowrap;
-            overflow: hidden;
-            width: 863px;
-            left: calc(50% - 450px);
-            color: black;
-        }
-
-        p {
-            position: fixed;
-            top: 350px;
-            left: 675px;
-            text-align: center;
-            font-size: 30px;
-            font-family: Didot;
-        }
-
-        .topnav {
-            position:fixed;
+            text-decoration: none;
             top: 15px;
-            right: 2%;
+            text-align: left;
+            font-size: 21px;
             font-family: Didot;
-            font-size: 20px;
-            border: solid black;
-            border-width:  0 0 1px 0;
+            font-weight: bold;
+            color: black;
+            left: 5%;
         }
-
+        .menu {
+            position: fixed;
+            text-decoration: none;
+            top: 12px;
+            right: 5%;
+            font-family: Didot;
+            font-size: 19px;
+        }
         .item {
           position: relative;
           text-decoration: none;
           color: black;
           display: inline-block;
-          width: 110px;
-          height: 32px;
+          width: 85px;
           text-align: center;
           vertical-align: middle;
-          transition: 0.1s; 
+          transition: 0.01s; 
+        }
+        .item:hover {
+          font-size: 20.5px;
         }
 
-        .item:hover {
-          font-size: 25px;
-          text-shadow: 0 0 2px #000;
-        }
 
 
     </style>
@@ -69,30 +51,14 @@
 
 
   <body>
-    <h1 id="name"></h1>
+    <div class="name">Tuanh Tran Cao</div>
 
-    <p></p>
-
-    <div class="topnav">
+    <div class="menu">
         <a class="item a" href="../">Home</a>
         <a class="item b" href="../projects">Projects</a>
         <a class="item c" href="../contact">Contact</a>
     </div>
 
-
-    <script>
-      let name = 'TUANH TRAN CAO'.split('');
-      let nameHeader = document.getElementById("name");
-      var i = 0;
-      var typewriter = setInterval(function() {
-        if (i === name.length) {
-          clearInterval();
-        } else {
-            nameHeader.innerHTML += name[i];
-            i = i + 1;
-        }
-      }, 200);
-    </script>
 
     
   </body>
