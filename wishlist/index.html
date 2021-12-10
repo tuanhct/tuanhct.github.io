@@ -13,29 +13,29 @@
     <meta name="theme-color" content="#ffffff">
     <style>
         body, html {
-            top: 0;
-            padding: 0;
-            margin: 0;
-            left: 0;
+          top: 0;
+          padding: 0;
+          margin: 0;
+          left: 0;
         }
         .name {
-            position: absolute;
-            text-decoration: none;
-            top: 30px;
-            text-align: left;
-            font-size: 21px;
-            font-family: Didot;
-            font-weight: bold;
-            color: black;
-            left: 5%;
+          position: absolute;
+          text-decoration: none;
+          top: 30px;
+          text-align: left;
+          font-size: 21px;
+          font-family: Didot;
+          font-weight: bold;
+          color: black;
+          left: 5%;
         }
         .menu {
-            position: absolute;
-            text-decoration: none;
-            top: 30px;
-            right: 5%;
-            font-family: Didot;
-            font-size: 19px;
+          position: absolute;
+          text-decoration: none;
+          top: 30px;
+          right: 5%;
+          font-family: Didot;
+          font-size: 19px;
         }
         .item {
           position: relative;
@@ -48,28 +48,21 @@
           transition: 0.01s; 
         }
         .item:hover {
-          font-size: 20.5px;
+          font-size: 17px;
         }
-
-
-        ul {
-        margin: 75px;
-        list-style: none;
+        .grid {
+          position: absolute;
+          top: 100px;
+          margin: 0;
+          display: inline-grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          grid-gap: 0px;
+          padding: 0px;
         }
-        ul li {
-          margin: 1%;
-          display: inline-block;
+        .pic img {
+          width: 100%;
         }
-        ul li a {
-          padding: 5px;
-          display: inline-block;      
-        }
-        ul li a img {
-          width: 300px;
-          height: 300px;
-          display: block;
-        }
-        ul li a:hover img {
+        .pic:hover img {
           transform: scale(0.9);
         }
 
@@ -84,18 +77,18 @@
 
     <div class="menu">
         <a class="item a" href="../">Home</a>
-        <a class="item d" href="mailto:tuanh_cao2002@yahoo.com">Contact</a>
-        <a class="item b" href="../wishlist">WishList</a>
-        <a class="item c" href="../resume.pdf" target="_blank">Resum&eacute</a>
+        <a class="item b" href="mailto:tuanh_cao2002@yahoo.com">Contact</a>
+        <a class="item c" href="../wishlist">WishList</a>
+        <a class="item d" href="../resume.pdf" target="_blank">Resum&eacute</a>
     </div>
 
 
-    <ul>
-      <li><a href="https://surprise.katespade.com/products/staci-small-slim-cardholder/WLR00129.html?p=dwvar_WLR00129_color%3D001%26dwvar_WLR00129_size%3DU" target="_blank"><img src="cardholder.png" alt="cardholder"></a></li>
-      <li><a href="https://www.apple.com/shop/product/MHLM3ZM/A/iphone-12-12-pro-clear-case-with-magsafe?fnode=48c4ceb8329be314c227e828adf4fc56dc8bb23bf008dd4a5a8fca38ded5c769df755efffbd0ded6cd12fb60d94a2cad1688c492c9f34120c202c0a8726f4f85dcca8a03c4669feb61ebd1504b2e61d43416c5a9be64d65160d7411ae825028dad0cac3bd88dd06772192ede9993db6c&fs=f%3Diphone12%26fh%3D4598%252B71796d" target="_blank"><img src="iphonecase.png" alt="iphonecase"></a></li>
-      <li><a href="https://www.apple.com/shop/product/MJWY3AM/A/magsafe-battery-pack?fnode=5d282bcc71f00b69abc711d7d429e5106ea0df15e831296546ce91a32bac926df7edb0af02fabcd4d663a41bf657a4e570517ebc336ce5d79df5ac54097d359e256d9acecb2fe2dd2503fc3b866c51547cb6469f9b87ddb2bf966421e3c9a99d" target="_blank"><img src="magsafe.png" alt="magsafe"></a></li>
-      <li><a hred="https://www.prada.com/us/en/men/jewelry_and_watches/cufflinks_and_pins/products.Enameled_triangle_pin_with_Saffiano_trim.2IS061_QHH_F0002.html" target="_blank"><img src="pradapin.png" alt="pradapin"></a></li>
-    </ul>
+    <div class="grid">
+      <a class="pic a" href="https://surprise.katespade.com/products/staci-small-slim-cardholder/WLR00129.html?p=dwvar_WLR00129_color%3D001%26dwvar_WLR00129_size%3DU" target="_blank"><img src="cardholder.png" alt="cardholder"></a>
+      <a class="pic b" href="https://www.apple.com/shop/product/MHLM3ZM/A/iphone-12-12-pro-clear-case-with-magsafe?fnode=48c4ceb8329be314c227e828adf4fc56dc8bb23bf008dd4a5a8fca38ded5c769df755efffbd0ded6cd12fb60d94a2cad1688c492c9f34120c202c0a8726f4f85dcca8a03c4669feb61ebd1504b2e61d43416c5a9be64d65160d7411ae825028dad0cac3bd88dd06772192ede9993db6c&fs=f%3Diphone12%26fh%3D4598%252B71796d" target="_blank"><img src="iphonecase.png" alt="iphonecase"></a>
+      <a class="pic c" href="https://www.apple.com/shop/product/MJWY3AM/A/magsafe-battery-pack?fnode=5d282bcc71f00b69abc711d7d429e5106ea0df15e831296546ce91a32bac926df7edb0af02fabcd4d663a41bf657a4e570517ebc336ce5d79df5ac54097d359e256d9acecb2fe2dd2503fc3b866c51547cb6469f9b87ddb2bf966421e3c9a99d" target="_blank"><img src="magsafe.png" alt="magsafe"></a>
+      <a class="pic d" hred="https://www.prada.com/us/en/men/jewelry_and_watches/cufflinks_and_pins/products.Enameled_triangle_pin_with_Saffiano_trim.2IS061_QHH_F0002.html" target="_blank"><img src="pradapin.png" alt="pradapin"></a>
+    </dic>
 
 
     
