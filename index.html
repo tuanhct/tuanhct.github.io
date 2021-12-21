@@ -12,48 +12,80 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
-        body, html {
-            top: 0;
-            padding: 0;
-            margin: 0;
-            left: 0;
+      body, html {
+        top: 0;
+        padding: 0;
+        margin: 0;
+        left: 0;
+      }
+      .name {
+        position: absolute;
+        text-decoration: none;
+        top: 30px;
+        text-align: left;
+        font-size: 21px;
+        font-family: Didot;
+        font-weight: bold;
+        color: black;
+        left: 50px;
+      }
+      .largemenu {
+        position: absolute;
+        text-decoration: none;
+        top: 30px;
+        right: 50px;
+        font-family: Didot;
+        font-size: 19px;
+      }
+      .item {
+        position: relative;
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+        width: 85px;
+        text-align: center;
+        vertical-align: middle;
+        transition: 0.01s; 
+      }
+      .item:hover {
+        font-size: 17px;
+      }
+      .smallmenu {
+        overflow: hidden;
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        text-align: right;
+        top: 30px;
+        right: 50px;
+        font-family: Didot;
+        font-size: 19px;
+      }
+      .smallmenu #myLinks {
+        display: none;
+      }
+      .subitem:hover {
+        font-size: 17px;
+      }
+      .smallmenu a {
+        height: 45px;
+        color: black;
+        text-decoration: none;
+        font-size: 19px;
+        display: block;
+      }
+      @media screen and (max-width: 700px) {
+        .largemenu {
+          display: none
         }
-        .name {
-            position: absolute;
-            text-decoration: none;
-            top: 30px;
-            text-align: left;
-            font-size: 21px;
-            font-family: Didot;
-            font-weight: bold;
-            color: black;
-            left: 5%;
+      }
+      @media screen and (min-width: 700px) {
+        .smallmenu {
+          display: none
         }
-        .menu {
-            position: absolute;
-            text-decoration: none;
-            top: 30px;
-            right: 5%;
-            font-family: Didot;
-            font-size: 19px;
-        }
-        .item {
-          position: relative;
-          text-decoration: none;
-          color: black;
-          display: inline-block;
-          width: 85px;
-          text-align: center;
-          vertical-align: middle;
-          transition: 0.01s; 
-        }
-        .item:hover {
-          font-size: 17px;
-        }
-
-
-
+      }
     </style>
   </head>
 
@@ -62,14 +94,35 @@
   <body>
     <div class="name">Tuanh Tran Cao</div>
 
-    <div class="menu">
-        <a class="item a" href="../">Home</a>
-        <a class="item b" href="https://www.linkedin.com/in/tuanhct/" target="_blank">LinkedIn</a>
-        <a class="item c" href="./resume.pdf" target="_blank">Resum&eacute</a>
-        <a class="item d" href="mailto:tuanh_cao2002@yahoo.com">Contact</a>
+    <div class="largemenu">
+      <a class="item a" href="https://www.linkedin.com/in/tuanhct/" target="_blank">LinkedIn</a>
+      <a class="item b" href="./resume.pdf" target="_blank">Resum&eacute</a>
+      <a class="item c" href="mailto:tuanh_cao2002@yahoo.com">Contact</a>
+    </div>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="smallmenu">
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <div id="myLinks">
+        <a class="subitem a" href="https://www.linkedin.com/in/tuanhct/" target="_blank">LinkedIn</a>
+        <a class="subitem b" href="./resume.pdf" target="_blank">Resum&eacute</a>
+        <a class="subitem c" href="mailto:tuanh_cao2002@yahoo.com">Contact</a>
+      </div>
     </div>
 
-    <img src = >
-    
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+
   </body>
 </html>
