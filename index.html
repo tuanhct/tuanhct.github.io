@@ -87,6 +87,21 @@
           display: none
         }
       }
+      .grid {
+          position: absolute;
+          top: 5em;
+          width: 100%;
+          margin: 0em;
+          display: inline-grid;
+          grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+        }
+        .pic img {
+          width: 100%;
+          height: 100%;
+        }
+        .pic:hover img {
+          transform: scale(0.9);
+        }
     </style>
   </head>
 
@@ -98,7 +113,7 @@
     <div class="largemenu">
       <a class="item a" href="https://www.linkedin.com/in/tuanhct/" target="_blank">LinkedIn</a>
       <a class="item b" href="./resume.pdf" target="_blank">Resum&eacute</a>
-      <a class="item c" href="mailto:tuanh_cao2002@yahoo.com">Contact</a>
+      <a class="item c" href="mailto:tuanhtcao@gmail.com">Contact</a>
     </div>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -110,7 +125,7 @@
       <div id="myLinks">
         <a class="subitem a" href="https://www.linkedin.com/in/tuanhct/" target="_blank">LinkedIn</a>
         <a class="subitem b" href="./resume.pdf" target="_blank">Resum&eacute</a>
-        <a class="subitem c" href="mailto:tuanh_cao2002@yahoo.com">Contact</a>
+        <a class="subitem c" href="mailto:tuanhtcao@gmail.com">Contact</a>
       </div>
     </div>
 
@@ -124,6 +139,11 @@
         }
       }
     </script>
+<!---
+    <div class="grid">
+      <a class="pic a" href="../"DataVis><img src="DataVis/atlantasatellite.png" alt="DataVis"></a>
+    </div>
+  -->
 
   </body>
 </html>
