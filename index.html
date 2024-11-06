@@ -2,148 +2,85 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Tuanh Cao</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-    <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg">
-    <meta name="apple-mobile-web-app-title" content="Tuanh Cao">
-    <meta name="application-name" content="Tuanh Cao">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="theme-color" content="#ffffff">
+    <title>Tuanh Tran Cao</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <style>
       body, html {
-        top: 0;
-        padding: 0;
-        margin: 0;
-        left: 0;
-      }
+      margin: 0;
+      padding: 0;
+      font-family: Didot, serif;
+    }
+    
+    /* Header - My Name */
+    .name {
+      position: absolute;
+      top: 20px;
+      left: 50px;
+      font-size: 21px;
+      font-weight: bold;
+      color: black;
+      text-decoration: none;
+    }
+
+    /* Navigation Menu */
+    /* .largemenu {
+      position: absolute;
+      top: 20px;
+      right: 50px;
+      display: flex;
+      gap: 20px;
+      font-size: 19px;
+    }
+    .largemenu .item {
+      text-decoration: none;
+      color: black;
+      transition: font-size 0.2s, margin 0.2s;
+    } */
+
+    /* Responsive Adjustments */
+    /* @media (max-width: 800px) {
       .name {
-        position: absolute;
-        text-decoration: none;
-        top: 30px;
-        text-align: left;
-        font-size: 21px;
-        font-family: Didot;
-        font-weight: bold;
-        color: black;
-        left: 50px;
+        font-size: 18px;
+        left: 30px;
       }
       .largemenu {
-        position: absolute;
-        text-decoration: none;
-        top: 30px;
-        right: 50px;
-        font-family: Didot;
-        font-size: 19px;
-      }
-      .item {
-        position: relative;
-        text-decoration: none;
-        color: black;
-        display: inline-block;
-        width: 85px;
-        text-align: center;
-        vertical-align: middle;
-        transition: 0.01s; 
-      }
-      .item:hover {
         font-size: 17px;
+        right: 30px;
+        gap: 15px;
       }
-      .smallmenu {
-        overflow: hidden;
-        position: absolute;
-        text-decoration: none;
-        color: black;
-        text-align: right;
-        top: 30px;
-        right: 50px;
-        font-family: Didot;
-        font-size: 19px;
-      }
-      .smallmenu #myLinks {
-        display: none;
-      }
-      .subitem:hover {
-        font-size: 17px;
-      }
-      .smallmenu a {
-        height: 45px;
-        padding: 4px;
-        color: black;
-        text-decoration: none;
-        font-size: 19px;
-        display: block;
-      }
-      @media screen and (max-width: 800px) {
-        .largemenu {
-          display: none
-        }
-      }
-      @media screen and (min-width: 800px) {
-        .smallmenu {
-          display: none
-        }
-      }
-      .grid {
-          position: absolute;
-          top: 5em;
-          width: 100%;
-          margin: 0em;
-          display: inline-grid;
-          grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-        }
-        .pic img {
-          width: 100%;
-          height: 100%;
-        }
-        .pic:hover img {
-          transform: scale(0.9);
-        }
-    </style>
-  </head>
+    }
 
-
-
-  <body>
-    <div class="name">Tuanh Tran Cao</div>
-
-    <div class="largemenu">
-      <a class="item a" href="https://www.linkedin.com/in/tuanhct/" target="_blank">LinkedIn</a>
-      <a class="item b" href="./resume.pdf" target="_blank">Resum&eacute</a>
-      <a class="item c" href="mailto:tuanhtcao@gmail.com">Contact</a>
-    </div>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <div class="smallmenu">
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-      <div id="myLinks">
-        <a class="subitem a" href="https://www.linkedin.com/in/tuanhct/" target="_blank">LinkedIn</a>
-        <a class="subitem b" href="./resume.pdf" target="_blank">Resum&eacute</a>
-        <a class="subitem c" href="mailto:tuanhtcao@gmail.com">Contact</a>
-      </div>
-    </div>
-
-    <script>
-      function myFunction() {
-        var x = document.getElementById("myLinks");
-        if (x.style.display === "block") {
-          x.style.display = "none";
-        } else {
-          x.style.display = "block";
-        }
+    @media (max-width: 500px) {
+      .name {
+        font-size: 16px;
+        left: 20px;
       }
-    </script>
-<!---
-    <div class="grid">
-      <a class="pic a" href="../"DataVis><img src="DataVis/atlantasatellite.png" alt="DataVis"></a>
-    </div>
-  -->
+      .largemenu {
+        font-size: 15px;
+        right: 20px;
+        gap: 10px;
+      }
+    } */
+  </style>
+</head>
 
-  </body>
+<body>
+
+<!-- Header - My Name -->
+<div class="name">Tuanh Tran Cao</div>
+
+<!-- Navigation Menu -->
+<!-- <div class="largemenu">
+  <a class="item" href="./">Home</a>
+  <a class="item" href="./gallery">About</a>
+</div> -->
+
+</body>
 </html>
