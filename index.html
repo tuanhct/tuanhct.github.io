@@ -12,22 +12,54 @@
 
 
     <style>
-      body, html {
-      margin: 0;
-      padding: 0;
-      font-family: Didot, serif;
-    }
     
-    /* Header - My Name */
-    .name {
-      position: absolute;
-      top: 20px;
-      left: 50px;
-      font-size: 21px;
-      font-weight: bold;
-      color: black;
-      text-decoration: none;
-    }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Didot, serif;
+        box-sizing: border-box; 
+      }
+      
+      .name {
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        font-size: 21px;
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+      }
+
+      .gallery-container {
+        padding: 100px 50px;
+        width: 100%;
+        box-sizing: border-box; 
+      }
+
+      .gallery {
+        display: grid;
+        gap: 25px;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        width: 100%;
+      }
+
+      .gallery-item {
+        width: 100%;
+        aspect-ratio: 3/2;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .caption {
+        margin-top: 8px;
+        text-align: right;
+        font-size: 14px;
+      }
 
     /* Navigation Menu */
     /* .largemenu {
@@ -68,19 +100,59 @@
         gap: 10px;
       }
     } */
-  </style>
-</head>
+    </style>
+  </head>
 
-<body>
+  <body>
 
-<!-- Header - My Name -->
-<div class="name">Tuanh Tran Cao</div>
+    <div class="name">Tuanh Tran Cao</div>
 
-<!-- Navigation Menu -->
-<!-- <div class="largemenu">
-  <a class="item" href="./">Home</a>
-  <a class="item" href="./gallery">About</a>
-</div> -->
+    <div class="gallery-container">
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="gallery/DSC00605.PNG" alt="Image 31">
+          <p class="caption">Lausanne, Switzerland | January 2025</p>
+        </div>
 
-</body>
+        <div class="gallery-item">
+          <img src="gallery/DSC00578.PNG" alt="Image 1">
+          <p class="caption">Lausanne, Switzerland | January 2025</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="gallery/DSC00496.PNG" alt="Image 2">
+          <p class="caption">Celerina, Switzerland | January 2025</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="gallery/DSC00434.PNG" alt="Image 2">
+          <p class="caption">Bruges, Belgium | December 2024</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="gallery/DSC00256.PNG" alt="Image 2">
+          <p class="caption">Colmar, France | December 2024</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="gallery/DSC00197.JPG" alt="Image 2">
+          <p class="caption">London, England, UK | December 2024</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="gallery/DSC00082.PNG" alt="Image 2">
+          <p class="caption">Leavenworth, Washington, USA | December 2024</p>
+        </div>
+        
+        <!-- Add more gallery items as needed -->
+      </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <!-- <div class="largemenu">
+      <a class="item" href="./">Home</a>
+      <a class="item" href="./gallery">About</a>
+    </div> -->
+
+  </body>
 </html>
