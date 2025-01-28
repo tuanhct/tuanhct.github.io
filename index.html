@@ -61,6 +61,21 @@
         font-size: 14px;
       }
 
+      @media (max-width: 600px) {
+        .name {
+          left: 25px;
+        }
+
+        .gallery-container {
+          padding: 75px 25px 0;
+        }
+
+        .gallery {
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          gap: 20px; 
+        }
+      }
+
     /* Navigation Menu */
     /* .largemenu {
       position: absolute;
